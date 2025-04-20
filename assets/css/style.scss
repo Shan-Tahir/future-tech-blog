@@ -1,0 +1,141 @@
+@import url(buttons.css);
+
+// Colors Variables
+$primary-color: #262626;
+$secondary-color: #FFD11A;
+$theme-color: #141414;
+$theme-light-color: #1A1A1A;
+$black-color: #000000;
+$white-color: #fff;
+$text-light-color: #98989A;
+$text-dark-color: #666666;
+$border-color: #333333;
+
+// Font Faimly Variables
+$font-inter: 'Inter', sans-serif;
+$font-Kumbh : "Kumbh Sans", sans-serif;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    height: 100%;
+}
+body{
+    font-size: 1rem;
+    font-family: $font-inter;
+}
+a, button{
+    text-decoration: none;
+    cursor: pointer;;
+}
+a, button:hover{
+    text-decoration: none;
+}
+ul{
+    text-decoration: none;
+    list-style: none;
+}
+p{
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-family: $font-inter;
+    color: $text-light-color;
+    line-height: 150%;
+}
+.section{
+    padding: 5rem 0;
+}
+.section-title{
+    font-family: $font-Kumbh;
+    font-weight: 500;
+    font-size: 3.625rem;
+    color: $white-color;
+    line-height: 150%;
+    letter-spacing: -3%;
+}
+.sub-title{
+    font-family: $font-Kumbh;
+    font-weight: 600;
+    font-size: 3rem;
+    color: $white-color;
+    letter-spacing: -3%;
+    line-height: 150%;
+}
+.mini-title{
+    font-size: 1.3rem;
+    font-family: $font-inter;
+    font-weight: 500;
+    color: $white-color;
+    line-height: 150%;
+    letter-spacing: -3%;
+}
+
+// Buttons CSS Start
+
+.theme-btn{
+    background-color: $secondary-color;
+    color: $black-color;
+    font-family: $font-inter;
+    font-weight: 500;
+    line-height: 150%;
+    transition: all 0.3s ease;
+    &:hover{
+        background-color: $secondary-color;
+        color: $black-color;
+        transform: translateY(-5px);
+        box-shadow: 0px 0px 16px 5px rgba(216, 213, 20, 0.575);
+        
+    }
+}
+// Buttons CSS End
+
+
+// TopBar CSS  Start
+
+.topBar{
+background-color: $theme-color;
+p{
+    color: $text-dark-color;
+    font-size: 1.2rem;
+    display: inline;
+}
+img{
+    transition: all 0.3s ease;
+    &:hover{
+        cursor: pointer;
+        transform: translateX(-3px);
+    }
+}
+}
+// TopBar CSS  End
+
+// Header CSS Start 
+
+.navbar{
+    background-color: $theme-light-color;
+    .nav-link{
+        color: $text-dark-color;
+    }
+    .active{
+       
+        border: 1px solid $border-color;
+        border-radius: 10px;
+        // padding: 5px 0px;
+        background-color: $theme-color;
+        .nav-link{
+            color: $white-color;
+        }
+    }
+    .navbar-toggler-icon{
+        filter: contrast(0.5);
+
+    }
+
+}
+
+// Header CSS End 
