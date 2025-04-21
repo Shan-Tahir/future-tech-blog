@@ -41,7 +41,7 @@ ul{
     list-style: none;
 }
 p{
-    font-size: 1.3rem;
+    font-size: 1.0rem;
     font-weight: 400;
     font-family: $font-inter;
     color: $text-light-color;
@@ -101,7 +101,7 @@ p{
 background-color: $theme-color;
 p{
     color: $text-dark-color;
-    font-size: 1.2rem;
+    font-size: clamp(0.7rem, 4vw, 1.2rem);
     display: inline;
 }
 img{
@@ -120,12 +120,13 @@ img{
     background-color: $theme-light-color;
     .nav-link{
         color: $text-dark-color;
+    font-size: clamp(0.7rem, 2vw, 1.2rem);
+
     }
     .active{
        
         border: 1px solid $border-color;
         border-radius: 10px;
-        // padding: 5px 0px;
         background-color: $theme-color;
         .nav-link{
             color: $white-color;
@@ -135,7 +136,38 @@ img{
         filter: contrast(0.5);
 
     }
+    .navbar-brand{
+        img{
+            width: clamp(8rem, 12vw, 12rem);
+        }
+    }
 
 }
 
 // Header CSS End 
+
+
+// Hero Section CSS Start
+
+.hero-section{
+    background-color: $black-color;
+    .hero-content{
+        span{
+            font-family: $font-Kumbh;
+            font-weight: 600;
+            line-height: 120%;
+            letter-spacing: -3%;
+            font-size: clamp(0.7rem, 4vw, 1.8rem);
+            color: $text-dark-color;
+            ;
+        }
+        h1{
+            font-family: $font-Kumbh;
+            font-weight: 600;
+            line-height: 120%;
+            letter-spacing: -3%;
+            font-size: clamp(0.7rem, 4vw, 3.5rem);
+            color: $white-color;
+        }
+    }
+}

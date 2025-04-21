@@ -30,7 +30,7 @@ ul {
 }
 
 p {
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 400;
   font-family: "Inter", sans-serif;
   color: #98989A;
@@ -88,7 +88,7 @@ p {
 }
 .topBar p {
   color: #666666;
-  font-size: 1.2rem;
+  font-size: clamp(0.7rem, 4vw, 1.2rem);
   display: inline;
 }
 .topBar img {
@@ -104,6 +104,7 @@ p {
 }
 .navbar .nav-link {
   color: #666666;
+  font-size: clamp(0.7rem, 2vw, 1.2rem);
 }
 .navbar .active {
   border: 1px solid #333333;
@@ -115,4 +116,27 @@ p {
 }
 .navbar .navbar-toggler-icon {
   filter: contrast(0.5);
+}
+.navbar .navbar-brand img {
+  width: clamp(8rem, 12vw, 12rem);
+}
+
+.hero-section {
+  background-color: #000000;
+}
+.hero-section .hero-content span {
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: -3%;
+  font-size: clamp(0.7rem, 4vw, 1.8rem);
+  color: #666666;
+}
+.hero-section .hero-content h1 {
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: -3%;
+  font-size: clamp(0.7rem, 4vw, 3.5rem);
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */
