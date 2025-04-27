@@ -24,6 +24,7 @@ $font-Kumbh : "Kumbh Sans", sans-serif;
 html{
     scroll-behavior: smooth;
     height: 100%;
+    font-size: 14px;
 }
 body{
     font-size: 1rem;
@@ -47,6 +48,10 @@ p{
     color: $text-light-color;
     line-height: 150%;
 }
+
+.secoundry{
+    color: $secondary-color;
+}
 .section{
     padding: 5rem 0;
 }
@@ -61,7 +66,7 @@ p{
 .sub-title{
     font-family: $font-Kumbh;
     font-weight: 600;
-    font-size: 3rem;
+    font-size: clamp(0.7rem, 3vw, 3rem);
     color: $white-color;
     letter-spacing: -3%;
     line-height: 150%;
@@ -92,13 +97,33 @@ p{
         
     }
 }
+.theme-btn-secondary{
+    background-color: transparent;
+    color: $text-dark-color;
+    border: 1px solid $border-color;
+    font-family: $font-inter;
+    font-weight: 500;
+    line-height: 150%;
+    transition: all 0.3s ease;
+    &:hover{
+        background-color: $secondary-color;
+        color: $black-color;
+        transform: translateY(-5px);
+        box-shadow: 0px 0px 16px 5px rgba(216, 213, 20, 0.575);
+        img{
+            filter: hue-rotate(189deg);
+        }
+        
+    }
+   
+}
 // Buttons CSS End
 
 
 // TopBar CSS  Start
 
 .topBar{
-background-color: $theme-color;
+background-color: $black-color;
 p{
     color: $text-dark-color;
     font-size: clamp(0.7rem, 4vw, 1.2rem);
@@ -169,5 +194,118 @@ img{
             font-size: clamp(0.7rem, 4vw, 3.5rem);
             color: $white-color;
         }
+    }
+    .banner-counter{
+
+                color: $white-color;
+                font-family: $font-inter;
+                font-weight: 600;
+                font-size: clamp(0.7rem, 4vw, 2rem);
+                border: 1px solid $border-color;
+            
+        
+    }
+
+    .bg-img {
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+      
+        &::before {
+          content: "";
+          position: absolute;
+          inset: 0; 
+          background-image: url("../images/banner-right.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: top;
+          opacity: 0.3;
+          z-index: 0;
+          border-left: 1px solid $border-color;
+          border-bottom: 1px solid $border-color;
+        }
+      
+        .hero-right-content {
+          position: relative; 
+          z-index: 1;
+          top: 46%;
+          left: 15%;
+          img{
+            transition: all 0.3s ease;
+            &:hover{
+                transform: translateY(-4px);
+            }
+          
+          }
+      
+          h3 {
+            font-family: $font-inter;
+            font-weight: 500;
+            font-size: clamp(0.7rem, 4vw, 1rem);
+            color: $white-color;
+          }
+          @media screen and (max-width: 767px) {
+            padding: 20px 0;
+            top: 0;
+            left: 0;
+            
+          }
+        }
+      }
+
+
+}
+.news-updated{
+    background-color: $black-color;
+    .news-parent{
+        border: 1px solid $border-color;
+
+        img{
+            &:hover{
+                transform: translateY(-4px);
+            }
+            transition: all 0.3s ease;
+        }
+      
+        .new-content{
+            background-color: $black-color;
+
+            h4{
+                color: $white-color;
+                font-family: $font-inter;
+                font-size: clamp(0.7rem, 4vw, 1.2rem);
+                font-weight: 500;
+            }
+            span{
+                color: $text-dark-color;
+                font-family: $font-inter;
+                font-size: clamp(0.7rem, 4vw, 1rem);
+                font-weight: 500;
+            }
+            p{
+                word-wrap: break-word;
+            }
+   
+
+          }
+    }
+   
+}
+
+
+// cta section start
+
+.cta-section{
+    background-color: $black-color;
+    padding: 5rem 0;
+
+    h4{
+        background-color: $border-color;
+        display: inline-block;
+        color: $white-color;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: clamp(0.4rem, 4vw, 1rem);
     }
 }
