@@ -2,310 +2,403 @@
 
 // Colors Variables
 $primary-color: #262626;
-$secondary-color: #FFD11A;
+$secondary-color: #ffd11a;
 $theme-color: #141414;
-$theme-light-color: #1A1A1A;
+$theme-light-color: #1a1a1a;
 $black-color: #000000;
 $white-color: #fff;
-$text-light-color: #98989A;
+$text-light-color: #98989a;
 $text-dark-color: #666666;
 $border-color: #333333;
 
 // Font Faimly Variables
-$font-inter: 'Inter', sans-serif;
-$font-Kumbh : "Kumbh Sans", sans-serif;
+$font-inter: "Inter", sans-serif;
+$font-Kumbh: "Kumbh Sans", sans-serif;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+  font-size: 14px;
+}
+body {
+  font-size: 1rem;
+  font-family: $font-inter;
+}
+a,
+button {
+  text-decoration: none;
+  cursor: pointer;
+}
+a,
+button:hover {
+  text-decoration: none;
+}
+ul {
+  text-decoration: none;
+  list-style: none;
+}
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: $font-inter;
+  color: $text-light-color;
+  line-height: 150%;
+}
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.secoundry {
+  color: $secondary-color;
 }
-html{
-    scroll-behavior: smooth;
-    height: 100%;
-    font-size: 14px;
+.section {
+  padding: 5rem 0;
 }
-body{
-    font-size: 1rem;
-    font-family: $font-inter;
+.section-title {
+  font-family: $font-Kumbh;
+  font-weight: 500;
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  color: $white-color;
+  line-height: 150%;
+  letter-spacing: -3%;
 }
-a, button{
-    text-decoration: none;
-    cursor: pointer;;
+.sub-title {
+  font-family: $font-Kumbh;
+  font-weight: 600;
+  font-size: clamp(0.7rem, 3vw, 3rem);
+  color: $white-color;
+  letter-spacing: -3%;
+  line-height: 150%;
 }
-a, button:hover{
-    text-decoration: none;
-}
-ul{
-    text-decoration: none;
-    list-style: none;
-}
-p{
-    font-size: 1.0rem;
-    font-weight: 400;
-    font-family: $font-inter;
-    color: $text-light-color;
-    line-height: 150%;
-}
-
-.secoundry{
-    color: $secondary-color;
-}
-.section{
-    padding: 5rem 0;
-}
-.section-title{
-    font-family: $font-Kumbh;
-    font-weight: 500;
-    font-size: 3.625rem;
-    color: $white-color;
-    line-height: 150%;
-    letter-spacing: -3%;
-}
-.sub-title{
-    font-family: $font-Kumbh;
-    font-weight: 600;
-    font-size: clamp(0.7rem, 3vw, 3rem);
-    color: $white-color;
-    letter-spacing: -3%;
-    line-height: 150%;
-}
-.mini-title{
-    font-size: 1.3rem;
-    font-family: $font-inter;
-    font-weight: 500;
-    color: $white-color;
-    line-height: 150%;
-    letter-spacing: -3%;
+.mini-title {
+  font-size: 1.3rem;
+  font-family: $font-inter;
+  font-weight: 500;
+  color: $white-color;
+  line-height: 150%;
+  letter-spacing: -3%;
 }
 
 // Buttons CSS Start
 
-.theme-btn{
+.theme-btn {
+  background-color: $secondary-color;
+  color: $black-color;
+  font-family: $font-inter;
+  font-weight: 500;
+  line-height: 150%;
+  transition: all 0.3s ease;
+  &:hover {
     background-color: $secondary-color;
     color: $black-color;
-    font-family: $font-inter;
-    font-weight: 500;
-    line-height: 150%;
-    transition: all 0.3s ease;
-    &:hover{
-        background-color: $secondary-color;
-        color: $black-color;
-        transform: translateY(-5px);
-        box-shadow: 0px 0px 16px 5px rgba(216, 213, 20, 0.575);
-        
-    }
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 16px 5px rgba(216, 213, 20, 0.575);
+  }
 }
-.theme-btn-secondary{
-    background-color: transparent;
-    color: $text-dark-color;
-    border: 1px solid $border-color;
-    font-family: $font-inter;
-    font-weight: 500;
-    line-height: 150%;
-    transition: all 0.3s ease;
-    &:hover{
-        background-color: $secondary-color;
-        color: $black-color;
-        transform: translateY(-5px);
-        box-shadow: 0px 0px 16px 5px rgba(216, 213, 20, 0.575);
-        img{
-            filter: hue-rotate(189deg);
-        }
-        
+.theme-btn-secondary {
+  background-color: transparent;
+  color: $text-dark-color;
+  border: 1px solid $border-color;
+  font-family: $font-inter;
+  font-weight: 500;
+  line-height: 150%;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: $secondary-color;
+    color: $black-color;
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 16px 5px rgba(216, 213, 20, 0.575);
+    img {
+      filter: hue-rotate(189deg);
     }
-   
+  }
 }
 // Buttons CSS End
 
-
 // TopBar CSS  Start
 
-.topBar{
-background-color: $black-color;
-p{
+.topBar {
+  background-color: $black-color;
+  p {
     color: $text-dark-color;
     font-size: clamp(0.7rem, 4vw, 1.2rem);
     display: inline;
-}
-img{
+  }
+  img {
     transition: all 0.3s ease;
-    &:hover{
-        cursor: pointer;
-        transform: translateX(-3px);
+    &:hover {
+      cursor: pointer;
+      transform: translateX(-3px);
     }
-}
+  }
 }
 // TopBar CSS  End
 
-// Header CSS Start 
+// Header CSS Start
 
-.navbar{
-    background-color: $theme-light-color;
-    .nav-link{
-        color: $text-dark-color;
+.navbar {
+  background-color: $theme-light-color;
+  .nav-link {
+    color: $text-dark-color;
     font-size: clamp(0.7rem, 2vw, 1.2rem);
-
+  }
+  .active {
+    border: 1px solid $border-color;
+    border-radius: 10px;
+    background-color: $theme-color;
+    .nav-link {
+      color: $white-color;
     }
-    .active{
-       
-        border: 1px solid $border-color;
-        border-radius: 10px;
-        background-color: $theme-color;
-        .nav-link{
-            color: $white-color;
-        }
+  }
+  .navbar-toggler-icon {
+    filter: contrast(0.5);
+  }
+  .navbar-brand {
+    img {
+      width: clamp(8rem, 12vw, 12rem);
     }
-    .navbar-toggler-icon{
-        filter: contrast(0.5);
-
-    }
-    .navbar-brand{
-        img{
-            width: clamp(8rem, 12vw, 12rem);
-        }
-    }
-
+  }
 }
 
-// Header CSS End 
-
+// Header CSS End
 
 // Hero Section CSS Start
 
-.hero-section{
-    background-color: $black-color;
-    .hero-content{
-        span{
-            font-family: $font-Kumbh;
-            font-weight: 600;
-            line-height: 120%;
-            letter-spacing: -3%;
-            font-size: clamp(0.7rem, 4vw, 1.8rem);
-            color: $text-dark-color;
-            ;
-        }
-        h1{
-            font-family: $font-Kumbh;
-            font-weight: 600;
-            line-height: 120%;
-            letter-spacing: -3%;
-            font-size: clamp(0.7rem, 4vw, 3.5rem);
-            color: $white-color;
-        }
+.hero-section {
+  background-color: $black-color;
+  .hero-content {
+    span {
+      font-family: $font-Kumbh;
+      font-weight: 600;
+      line-height: 120%;
+      letter-spacing: -3%;
+      font-size: clamp(0.7rem, 4vw, 1.8rem);
+      color: $text-dark-color;
     }
-    .banner-counter{
+    h1 {
+      font-family: $font-Kumbh;
+      font-weight: 600;
+      line-height: 120%;
+      letter-spacing: -3%;
+      font-size: clamp(0.7rem, 4vw, 3.5rem);
+      color: $white-color;
+    }
+  }
+  .banner-counter {
+    color: $white-color;
+    font-family: $font-inter;
+    font-weight: 600;
+    font-size: clamp(0.7rem, 4vw, 2rem);
+    border: 1px solid $border-color;
+  }
 
-                color: $white-color;
-                font-family: $font-inter;
-                font-weight: 600;
-                font-size: clamp(0.7rem, 4vw, 2rem);
-                border: 1px solid $border-color;
-            
-        
+  .bg-img {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url("../images/banner-right.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top;
+      opacity: 0.3;
+      z-index: 0;
+      border-left: 1px solid $border-color;
+      border-bottom: 1px solid $border-color;
     }
 
-    .bg-img {
-        position: relative;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: top;
-      
-        &::before {
-          content: "";
-          position: absolute;
-          inset: 0; 
-          background-image: url("../images/banner-right.png");
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-position: top;
-          opacity: 0.3;
-          z-index: 0;
-          border-left: 1px solid $border-color;
-          border-bottom: 1px solid $border-color;
-        }
-      
-        .hero-right-content {
-          position: relative; 
-          z-index: 1;
-          top: 46%;
-          left: 15%;
-          img{
-            transition: all 0.3s ease;
-            &:hover{
-                transform: translateY(-4px);
-            }
-          
-          }
-      
-          h3 {
-            font-family: $font-inter;
-            font-weight: 500;
-            font-size: clamp(0.7rem, 4vw, 1rem);
-            color: $white-color;
-          }
-          @media screen and (max-width: 767px) {
-            padding: 20px 0;
-            top: 0;
-            left: 0;
-            
-          }
+    .hero-right-content {
+      position: relative;
+      z-index: 1;
+      top: 46%;
+      left: 15%;
+      img {
+        transition: all 0.3s ease;
+        &:hover {
+          transform: translateY(-4px);
         }
       }
 
-
-}
-.news-updated{
-    background-color: $black-color;
-    .news-parent{
-        border: 1px solid $border-color;
-
-        img{
-            &:hover{
-                transform: translateY(-4px);
-            }
-            transition: all 0.3s ease;
-        }
-      
-        .new-content{
-            background-color: $black-color;
-
-            h4{
-                color: $white-color;
-                font-family: $font-inter;
-                font-size: clamp(0.7rem, 4vw, 1.2rem);
-                font-weight: 500;
-            }
-            span{
-                color: $text-dark-color;
-                font-family: $font-inter;
-                font-size: clamp(0.7rem, 4vw, 1rem);
-                font-weight: 500;
-            }
-            p{
-                word-wrap: break-word;
-            }
-   
-
-          }
+      h3 {
+        font-family: $font-inter;
+        font-weight: 500;
+        font-size: clamp(0.7rem, 4vw, 1rem);
+        color: $white-color;
+      }
+      @media screen and (max-width: 767px) {
+        padding: 20px 0;
+        top: 0;
+        left: 0;
+      }
     }
-   
+  }
 }
+.news-updated {
+  background-color: $black-color;
+  .news-parent {
+    border: 1px solid $border-color;
 
+    img {
+      &:hover {
+        transform: translateY(-4px);
+      }
+      transition: all 0.3s ease;
+    }
+
+    .new-content {
+      background-color: $black-color;
+
+      h4 {
+        color: $white-color;
+        font-family: $font-inter;
+        font-size: clamp(0.7rem, 4vw, 1.2rem);
+        font-weight: 500;
+      }
+      span {
+        color: $text-dark-color;
+        font-family: $font-inter;
+        font-size: clamp(0.7rem, 4vw, 1rem);
+        font-weight: 500;
+      }
+      p {
+        word-wrap: break-word;
+      }
+    }
+  }
+}
 
 // cta section start
 
-.cta-section{
-    background-color: $black-color;
-    padding: 5rem 0;
+.cta-section {
+  background-color: $primary-color;
+  padding: 5rem 0;
 
-    h4{
-        background-color: $border-color;
-        display: inline-block;
-        color: $white-color;
-        padding: 10px;
-        border-radius: 5px;
-        font-size: clamp(0.4rem, 4vw, 1rem);
+  .cta-content {
+    h4 {
+      background-color: $border-color;
+      display: inline-block;
+      color: $white-color;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: clamp(0.4rem, 4vw, 1rem);
     }
+    h2 {
+      font-size: clamp(2.2rem, 4vw, 3rem) !important;
+    }
+  }
+}
+
+// Future Tech Blog Section CSS Srart
+
+.future-tec {
+  background-color: $black-color;
+  border-top: 1px solid $border-color;
+  .tech-blog-content {
+    h2 {
+      font-size: clamp(1.7rem, 3vw, 2.5rem);
+    }
+  }
+
+  .tech-blog-inner-content {
+    background-color: $primary-color;
+    border: 1px solid $border-color;
+    border-radius: 10px;
+    transition: all ease 0.5s;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 0px 16px 5px rgb(163 160 6 / 57%);
+      border-color: #000000;
+    }
+
+    h2 {
+      color: $white-color;
+      font-size: clamp(1rem, 3vw, 1.3rem);
+    }
+  }
+}
+
+// Testimonial-Tab CSS Start
+.testimonial-tab {
+  background-color: $black-color;
+  .nav {
+    .nav-item {
+      background-color: $black-color;
+
+      border-radius: 5px;
+
+      button {
+        padding: 15px 40px;
+        color: $text-light-color;
+        border: 1px solid $border-color;
+        box-shadow: 0px 0px 10px 4px #1a1a1a;
+        @media screen and (max-width: 1399px) {
+          padding: 10px 30px;
+        }
+        @media screen and (max-width: 425px) {
+          padding: 7px 15px;
+        }
+      }
+    }
+    .active {
+      background-color: $border-color !important;
+      box-shadow: 0px 0px 10px 5px rgb(192, 183, 183);
+      .nav-link {
+        color: $white-color !important;
+      }
+    }
+  }
+
+  .main-parent {
+    border-top: 1px solid $border-color;
+    
+
+    .img-container {
+      ul {
+        li {
+          color: $text-dark-color;
+        }
+      }
+      img{
+        border-radius: 50%;
+        border: 2px solid $secondary-color;
+        transition: all ease 0.5s;
+        &:hover{
+            transform: translateY(-3px);
+            box-shadow:0px 0px 36px 0px #f7d960;
+          }
+      }
+    }
+
+    .content-container {
+      ul {
+       
+        li {
+          padding: 6px 15px;
+          border: 1px solid $border-color;
+          background-color: $primary-color;
+          border-radius: 20px;
+          color: $text-light-color;
+          transition: all ease 0.5s;
+        
+
+          &:hover{
+            transform: translateY(-3px);
+            box-shadow: 0px 0px 10px 2px #f7d960;
+          }
+        }
+      }
+      span{
+        color: $text-light-color;
+        margin-bottom: 20px;
+      }
+    }
+  }
 }
